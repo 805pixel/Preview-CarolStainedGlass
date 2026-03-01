@@ -526,6 +526,31 @@
             letter-spacing: 0.1em;
         }
 
+        /* ===== Rating SECTION ===== */
+        .rating-section {
+            text-align: center;
+            padding: 40px 20px 20px;
+            z-index: 10;
+            position: relative;
+        }
+        .rating-stars {
+            color: var(--gold);
+            font-size: 28px;
+            letter-spacing: 8px;
+            margin-bottom: 8px;
+        }
+        .rating-text {
+            font-family: 'Josefin Sans', sans-serif;
+            font-size: 14px;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: rgba(245,237,224,0.7);
+        }
+        .rating-text strong {
+            color: var(--gold-light);
+            font-weight: 400;
+        }
+
         /* ===== TESTIMONIAL SECTION ===== */
         .testimonial-section {
             text-align: center;
@@ -1309,6 +1334,14 @@
     </div>
 </section>
 
+<!-- ===== RATING BANNER (new) ===== -->
+<div class="rating-section reveal">
+    <div class="rating-stars">
+        <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+    </div>
+    <div class="rating-text">Rated <strong>4.9/5</strong> on Google</div>
+</div>
+
 <!-- ===== TESTIMONIAL ===== -->
 <section class="testimonial-section">
     <div class="testimonial-block reveal">
@@ -1320,6 +1353,8 @@
             <div class="t-dot active" onclick="changeTestimonial(0)"></div>
             <div class="t-dot" onclick="changeTestimonial(1)"></div>
             <div class="t-dot" onclick="changeTestimonial(2)"></div>
+            <div class="t-dot" onclick="changeTestimonial(3)"></div>
+            <div class="t-dot" onclick="changeTestimonial(4)"></div>
         </div>
     </div>
 </section>
@@ -1487,16 +1522,24 @@
     // Testimonials
     const testimonials = [
         {
-            text: '"The custom window panel Carol made for our entryway has become the centerpiece of our home. Every morning, the colors shift and dance and it feels like living inside a painting."',
-            author: '— Margaret & Thomas R., Satisfied Clients'
+            text: '"Carol was a delight. I needed last minute Christmas gifts and boy was this the place. So much great stuff and she does her own stained glass pieces that are just beautiful. I was lost in there for over an hour. You can really find something for everyone here. Then she wrapped some of the gifts for me—they were so amazing and better than a department store. Staying local really did make a difference."',
+            author: '— Jana Long, Local Guide'
         },
         {
-            text: '"Carol spent weeks understanding exactly what we wanted for our garden and created something beyond anything we imagined. The dragonfly sculpture is simply breathtaking."',
-            author: '— Diane K., Garden Commission'
+            text: '"Great shop, she has tons of stained glass tools and supplies for any project! Carol was very helpful with picking out tools. You can find a gift for anyone here!"',
+            author: '— Rebekah Lovering, Happy Customer'
         },
         {
-            text: '"I commissioned a memorial piece for my mother and Carol treated the project with such reverence and artistry. It is the most meaningful object I own."',
-            author: '— James P., Memorial Commission'
+            text: '"Cute shop. Owner highly skilled and very pleasant. Not the kind of place you can go to just once! There were so many unique items it was impossible to see them all."',
+            author: '— Holly Payne, Local Guide'
+        },
+        {
+            text: '"Beautiful gifts everywhere you look... There is also a great selection of glass for stained glass projects and any questions you have can be answered."',
+            author: '— Wendy Clayton & Gayle Jensen (Combined sentiment)'
+        },
+        {
+            text: '"Beautiful product. Highly recommend for unique finds and expert advice."',
+            author: '— Sheryl Gifford, Happy Customer'
         }
     ];
     let currentTestimonial = 0;
